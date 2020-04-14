@@ -1,0 +1,20 @@
+{
+  "name": "portfolia-01",
+  "version": "1.0.0",
+  "description": "A webpage created by Kui for his portfolio. This page is created using HAML for HTML and SASS for CSS. This page uses the new grid layout from HTML5",
+  "author": "Kiu",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-haml": "^1.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
