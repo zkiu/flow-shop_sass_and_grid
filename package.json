@@ -16,5 +16,9 @@
     "gulp-haml": "^1.0.1",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "kind-of": "^6.0.3",
+    "lodash": "^4.17.15"
   }
 }
