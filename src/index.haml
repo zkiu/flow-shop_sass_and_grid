@@ -3,13 +3,85 @@
     %head
         %meta(charset="UTF-8")/
         %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
-        %title Flower Shop
-        %link(rel="stylesheet" href="style.css")
+        %title Bill's Flower Shop
+        %link(rel="stylesheet" href="style.css")/
+        %script(src="https://kit.fontawesome.com/5f6135a920.js" crossorigin="anonymous")
         -# %script(defer src="index.js")
         
     %body
         %header
             %a(href="index.html")
-                %img.header-company-logo(src="https://via.placeholder.com/50" alt="company logo")/
-                %p.header-company-name Bill's Flower Shop
-                %p.header-company-slogan Keeping events in full bloom since 2020
+                %h1.header-company-name
+                    %i.fas.fa-seedling
+                    Bill's Flower Shop
+                %p.header-company-slogan Providing customized flower arrangements for all occasions since 2020
+                #header-contacts
+                    Quick Contacts:
+                    %p Phone Number: (780) XXX-XXXX
+                    %p Email:
+                    %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
+                
+                
+
+            %nav
+                %ul
+                    %li
+                        %a(href="#home") Home
+                    %li
+                        %a(href="#offerings") Offerings
+                    %li
+                        %a(href="#contacts") Contacts
+                    %li
+                        %a(href="#about")  About
+                        
+        %main
+            %aside
+                %a.return-pop-out(href="https://zkiu.github.io/Quoc-resume-portfolio/")
+                    %i.far.fa-caret-square-left 
+                    %span(style="display:none;") Click here to return to Kiu's resume page. 
+
+
+            %section#home
+                %h2 Bill's Flower Shop Working in Your Community
+                %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
+
+
+
+            %article#offerings
+                %h2 Flower Arrangements for All Occations  
+                %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
+
+                %section
+                    %h3 Blooms for Wedding
+                    %img(src="https://via.placeholder.com/200x200" alt="wedding flower")/
+                    %p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus voluptas non veritatis harum magni tempore, deserunt, consectetur fuga autem eligendi sapiente. Reprehenderit dolor nam quidem neque, non esse facere.
+                    %div
+                        %a(href="#")
+                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                        %a(href="#")
+                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                        %a(href="#")
+                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                        %a(href="#")
+                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+
+
+
+            %section#about
+                %h2 About the Florist
+                %img(src="https://via.placeholder.com/150x250" alt="Photo of Bill")/
+                %blockquote We provide the right flowers to mark your important life moments. Please reach out to me and we can discuss what you are looking for, no strings attached.
+                %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
+
+        %footer#contacts
+                %h2 Contact Us With Your Questions and Requests
+                %p Phone Number: (780) XXX-XXXX
+                %p Email:
+                %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
+                %p Follow us:
+                %a(href="https://twitter.com/")
+                    %i.fab.fa-twitter
+                %a(href="https://facebook.com/")
+                    %i.fab.fa-facebook
+                %a(href="https://instagram.com/")
+                    %i.fab.fa-instagram
