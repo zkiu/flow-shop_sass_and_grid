@@ -1,10 +1,19 @@
 @import "scss/normalize";
+@import "scss/include-media";
 @import "scss/variables";
+
 
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     
+    @include media('>=phone'){
+        background: red;
+    }
+    @include media('>=tablet'){
+        background: green;
+    }
+
 }
 
 // Button to go back to resume page
