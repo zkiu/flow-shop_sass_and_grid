@@ -9,31 +9,30 @@ html {
 .return-pop-out {
     display: block;
     position: fixed;
-    right: 0;
+    right: -187px;
     top: 20%;
     background-color: rgba(255, 208, 0, 0.9);
     border: 1px solid orange;
     border-right: none;
     border-radius: 5px 0 0 5px;
     text-decoration: none;
+    transition: transform .5s;
         i {
             font-size: 2em;
             margin: 5px;
         }
         div {
             font-size: 1em;
-            display: none;
+            display: inline-block;
             margin-right: 5px;
             -ms-transform: translateY(-40%);
             transform: translateY(-40%)
         }
         &:hover {
-            background-color: lighten(rgba(255, 208, 0, 0.9), 10%);
-            div {
-                display: inline-block;
+            transform: translate(-187px, 0px);
             }   
-        }
     }
+    
 
 @media screen and (prefers-reduced-motion: reduce) {
     html {
