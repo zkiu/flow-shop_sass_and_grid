@@ -7,7 +7,9 @@ const haml = require('gulp-haml');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
-const babel= require('gulp-babel');
+const sourcemaps = require("gulp-sourcemaps");
+
+const babel = require('gulp-babel');
 
 const browserSync = require('browser-sync').create();
 
@@ -27,9 +29,13 @@ function hamltohtml(cb) {
 
 function css(cb) {
   src('src/style.scss')
-  .pipe(sass({
-    outputStyle: 'compressed'
-  }))
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass({
+      sourcemap: true,
+      outputStyle: 'compressed'
+      }).on("error", sass.logError)
+    )
 
   .pipe(dest('build/'));
 
