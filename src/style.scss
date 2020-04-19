@@ -1,11 +1,13 @@
 @import "scss/normalize";
-@import "scss/include-media";
 @import "scss/variables";
-
+// @import "scss/animate";
+@import "scss/include-media";
+@import "scss/mixins";
 
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    background-color: $main-background-color;
     
     @include media('>=phone'){
         background: red;
@@ -13,40 +15,82 @@ html {
     @include media('>=tablet'){
         background: green;
     }
-
-}
-
-// Button to go back to resume page
-.return-pop-out {
-    display: block;
-    position: fixed;
-    right: -187px;
-    top: 20%;
-    background-color: rgba(255, 208, 0, 0.9);
-    border: 1px solid orange;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-    text-decoration: none;
-    transition: transform .5s;
-        i {
-            font-size: 2em;
-            margin: 5px;
-        }
-        div {
-            font-size: 1em;
-            display: inline-block;
-            margin-right: 5px;
-            -ms-transform: translateY(-40%);
-            transform: translateY(-40%)
-        }
-        &:hover {
-            transform: translate(-187px, 0px);
-            }   
-    }
-    
-
-@media screen and (prefers-reduced-motion: reduce) {
-    html {
+    @media screen and (prefers-reduced-motion: reduce) {
         scroll-behavior: auto;
     }
 }
+
+    
+// Company logo at header
+.company-logo {
+    text-decoration: none;
+    
+    color: lighten($header-font-color, 10%);
+    display: block;
+    
+    h1 {
+        font-size: 2.5em;
+        margin: auto;
+        padding: 10px 0;
+        width: fit-content;border-bottom: 1px double $header-font-color;
+    } 
+}
+
+.header-company-slogan {
+    //this is hidden on phone display for conciseness
+    display: none;
+    @include media('>=phone'){
+        display: block;
+    }
+}
+
+.header-contacts {
+    margin: 0;
+    color: lighten($header-font-color, 10%);
+    font-size: 1.3em;
+    p:first-child {
+        padding-top: 5px;
+    } 
+    p {
+        margin: 0;
+        padding-bottom: 5px;
+        padding-left: $overall-left-side-gap;
+    }
+    a {
+        text-decoration: none;
+        color: $header-font-color;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: $color-pale-pink;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    padding-left: $overall-left-side-gap;
+    // style design for menu
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    li {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: 1px dotted #000;
+        margin-right: $overall-left-side-gap;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        
+        &:visited {
+            color: inherit;
+        }
+    }
+}
+

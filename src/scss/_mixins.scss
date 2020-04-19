@@ -1,0 +1,80 @@
+// PopOut Tab to go back to resume page ---------------------------
+
+// initial animation sequence, mostly for mobile users
+.return-pop-out {
+    animation-name: tabPopOut;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes tabPopOut {
+    0% {right: -187px;}
+    50% {right: 0;}
+    100% {right: -187px;}
+}
+//Rest of the styles for this feature
+.return-pop-out {
+    display: block;
+    position: fixed;
+    right: -187px;
+    bottom: 20%;
+    z-index: 99;
+    background-color: rgba(255, 208, 0, 0.9);
+    border: 1px solid orange;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    text-decoration: none;
+    transition: transform .5s;
+    cursor: pointer;
+    &:hover {
+        transform: translate(-187px, 0px);
+    }
+
+    i {
+        font-size: 2em;
+        margin: 5px;
+    }
+
+    div {
+        font-size: 1em;
+        display: inline-block;
+        margin-right: 5px;
+        -ms-transform: translateY(-40%);
+        transform: translateY(-40%)
+    }
+}
+
+// BUTTON - Got to Top
+// from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+#btnTop {
+    display: none;
+    //Hidden by default
+    position: fixed;
+    // Fixed/sticky position
+    bottom: 10px;
+    // Place the button at the bottom of the page */
+    right: 10px;
+    // Place the button 30px from the right */
+    z-index: 99;
+    // Make sure it does not overlap */
+    border: none;
+    // Remove borders */
+    outline: none;
+    // Remove outline */
+    background-color: $btn-top-color;
+    // Set a background color */
+    color: white;
+    // Text color */
+    cursor: pointer;
+    // Add a mouse pointer on hover */
+    padding: 15px;
+    // Some padding */
+    border-radius: 10px 100px / 120px;
+    ;
+    // Rounded corners */
+    font-size: 18px;
+    // Increase font size */
+    &:hover {
+        background-color: darken($btn-top-color, 20%);
+    }
+}

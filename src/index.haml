@@ -6,19 +6,18 @@
         %title Bill's Flower Shop
         %link(rel="stylesheet" href="style.css")/
         %script(src="https://kit.fontawesome.com/5f6135a920.js" crossorigin="anonymous")
-        -# %script(defer src="index.js")
+        %script(defer=true src="script.js")
         
     %body
         %header
-            %a(href="index.html")
+            %a.company-logo(href="index.html")
                 %h1.header-company-name
                     %i.fas.fa-seedling
                     Bill's Flower Shop
-                %p.header-company-slogan Providing customized flower arrangements for all occasions since 2020
-                #header-contacts
-                    Quick Contacts:
-                    %p Phone Number: (780) XXX-XXXX
-                    %p Email:
+            %p.header-company-slogan Providing customized flower arrangements for all occasions since 2020!
+            %div.header-contacts
+                %p Phone Number: (780) XXX-XXXX
+                %p Email:&nbsp;
                     %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
                 
                 
@@ -30,9 +29,13 @@
                     %li
                         %a(href="#offerings") Offerings
                     %li
-                        %a(href="#contacts") Contacts
-                    %li
                         %a(href="#about")  About
+                    %li
+                        %a(href="#contacts") Contacts
+        
+        
+            %button#btnTop(type="button" onclick="topFunction()" title="Go to top of page")
+                %i.fas.fa-arrow-up TOP   
                         
         %main
 
@@ -87,3 +90,4 @@
                     %i.fab.fa-facebook
                 %a(href="https://instagram.com/")
                     %i.fab.fa-instagram
+        

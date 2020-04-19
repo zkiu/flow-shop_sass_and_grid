@@ -56,10 +56,10 @@ function js(cb) {
 
 
 function watcher(cb) {
-  watch('src/index.haml').on('change', series(hamltohtml, browserSync.reload))
+  watch('src/*.haml').on('change', series(hamltohtml, browserSync.reload))
   watch('src/style.scss').on('change', series(css, browserSync.reload))
   watch('src/scss/*.scss').on('change', series(css, browserSync.reload))
-  watch('src/main.js').on('change', series(js, browserSync.reload))
+  watch('src/*.js').on('change', series(js, browserSync.reload))
   cb();
 }
 
