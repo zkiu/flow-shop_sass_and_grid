@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 %html(lang="en")
     %head
         %meta(charset="UTF-8")/
@@ -22,31 +22,34 @@
                 
                 
 
-            %nav
-                %ul
-                    %li 
-                        %a(href="#home") Home
-                    %li
-                        %a(href="#offerings") Offerings
-                    %li
-                        %a(href="#about")  About
-                    %li
-                        %a(href="#contacts") Contacts
+        %nav
+            %ul
+                %li 
+                    %a(href="#welcome") Home
+                %li
+                    %a(href="#offerings") Offerings
+                %li
+                    %a(href="#about")  About
+                %li
+                    %a(href="#contacts") Contacts
         
         
-            %button#btnTop(type="button" onclick="topFunction()" title="Go to top of page")
-                %i.fas.fa-arrow-up TOP   
-                        
-        %main
+        %button#btnTop(type="button" onclick="topFunction()" title="Go to top of page")
+            %i.fas.fa-arrow-up TOP   
+        
+        %aside
+            %a.return-pop-out(href="https://zkiu.github.io/kiu-resume-portfolio/")
+                %i.far.fa-caret-square-left 
+                %div Return to Kiu's resume page
+
+
+        %main.container
 
             / Button to go back to resume page
-            %aside
-                %a.return-pop-out(href="https://zkiu.github.io/kiu-resume-portfolio/")
-                    %i.far.fa-caret-square-left 
-                    %div Return to Kiu's resume page
+            
 
 
-            %section#home
+            %section#welcome
                 %h2 Bill's Flower Shop Working in Your Community
                 %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
 
@@ -55,21 +58,33 @@
             %article#offerings
                 %h2 Flower Arrangements for All Occations  
                 %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
-
-                %section
-                    %h3 Blooms for Wedding
-                    %img(src="https://via.placeholder.com/200x200" alt="wedding flower")/
-                    %p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus voluptas non veritatis harum magni tempore, deserunt, consectetur fuga autem eligendi sapiente. Reprehenderit dolor nam quidem neque, non esse facere.
-                    %div
-                        %a(href="#")
-                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
-                        %a(href="#")
-                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
-                        %a(href="#")
-                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
-                        %a(href="#")
-                            %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
-
+                %div.offering-container
+                    %section
+                        %h3 Blooms for Wedding
+                        %img(src="https://via.placeholder.com/200x200" alt="wedding flower")/
+                        %p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus voluptas non veritatis harum magni tempore, deserunt, consectetur fuga autem eligendi sapiente. Reprehenderit dolor nam quidem neque, non esse facere.
+                        %div
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="wedding flower example")/
+                    %section
+                        %h3 Coming of Age Celebrations
+                        %img(src="https://via.placeholder.com/200x200" alt="sweet sixteen celebration")/
+                        %p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus voluptas non veritatis harum magni tempore, deserunt, consectetur fuga autem eligendi sapiente. Reprehenderit dolor nam quidem neque, non esse facere.
+                        %div
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="birthday flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="birthday flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="birthday flower example")/
+                            %a(href="#")
+                                %img(src="https://via.placeholder.com/100x100" alt="birthday flower example")/
 
 
             %section#about
@@ -79,11 +94,13 @@
                 %p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ullam cupiditate velit, ducimus corporis, possimus doloribus iste, officiis nemo odio magnam reprehenderit perferendis reiciendis sapiente est quisquam ex. Beatae, qui!
 
         %footer#contacts
-                %h2 Contact Us With Your Questions and Requests
+            %div#contacts-traditional    
+                %h3 Contact Us
                 %p Phone Number: (780) XXX-XXXX
                 %p Email:
                 %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
-                %p Follow us:
+            %div#contacs-social    
+                %h3 Follow us:
                 %a(href="https://twitter.com/")
                     %i.fab.fa-twitter
                 %a(href="https://facebook.com/")

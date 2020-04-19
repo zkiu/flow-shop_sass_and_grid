@@ -3,13 +3,14 @@
 // @import "scss/animate";
 @import "scss/include-media";
 @import "scss/mixins";
+@import "scss/_grid-layout";
 
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     background-color: $main-background-color;
     
-    @include media('>=phone'){
+    @include media('>phone'){
         background: red;
     }
     @include media('>=tablet'){
@@ -24,7 +25,6 @@ html {
 // Company logo at header
 .company-logo {
     text-decoration: none;
-    
     color: lighten($header-font-color, 10%);
     display: block;
     
@@ -34,14 +34,6 @@ html {
         padding: 10px 0;
         width: fit-content;border-bottom: 1px double $header-font-color;
     } 
-}
-
-.header-company-slogan {
-    //this is hidden on phone display for conciseness
-    display: none;
-    @include media('>=phone'){
-        display: block;
-    }
 }
 
 .header-contacts {
@@ -70,11 +62,6 @@ nav ul {
     padding-bottom: 5px;
     font-size: 1.5em;
     padding-left: $overall-left-side-gap;
-    // style design for menu
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
     li {
         padding-top: 1px;
         padding-bottom: 1px;
@@ -94,3 +81,9 @@ nav ul {
     }
 }
 
+// #welcome {
+//     background-color: paleturquoise;
+// }
+
+
+// TO DO: bigger screens, grid tab order, aria, move top button to top of viewport

@@ -1,0 +1,68 @@
+.header-company-slogan {
+    //this is hidden on phone display for conciseness
+    display: none;
+    @include media('>=phone') {
+        display: block;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;  
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    &>* {
+        // single column by default 
+        grid-column: 1 / span 12;
+    }
+}
+
+
+// for grid debugging
+// #welcome {       background-color: paleturquoise;}
+// #offerings {    background-color: orange;}
+// .offering-container { background-color: blue;}
+// #about {    background-color: pink;}
+
+
+
+@include media('>phone') {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@include media('>650px') {
+    //creating 2 columns inside offerings at higher widths
+    .offering-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        background-color: rosybrown;
+    }
+}
+
+@include media('>1000px') {
+    #offerings{
+        grid-column: 1 / 10;
+    }
+    #about {
+        grid-column: 10 / 13;
+    }
+}
+
+
+
+body {
+    max-width: 1200px;
+}
