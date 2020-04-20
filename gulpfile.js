@@ -16,7 +16,9 @@ const browserSync = require('browser-sync').create();
 
 
 async function clean(cb) {
-  await del('build/');
+  await del('build/*.html');
+  await del('build/*.css');
+  await del('build/*.js');
   cb();
 }
 

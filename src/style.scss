@@ -22,7 +22,7 @@ html {
 }
 
     
-// Company logo at header
+//  HEADER WITH COMPANY LOGO
 .company-logo {
     text-decoration: none;
     color: lighten($header-font-color, 10%);
@@ -54,6 +54,7 @@ html {
     }
 }
 
+//  NAVIGATION AREA
 nav ul {
     list-style-type: none;
     background-color: $color-pale-pink;
@@ -81,9 +82,55 @@ nav ul {
     }
 }
 
-// #welcome {
-//     background-color: paleturquoise;
-// }
+//  WELCOME SPLASH
+
+#welcome {
+    //  BACKGROUND image settings
+    background:
+      /* top, transparent filter, faked with gradient */
+      linear-gradient(rgba(255, 0, 0, 0.1),rgba(0, 0, 0, 0.6)),
+      /* bottom, image */
+      url("images/annie-spratt-01Wa3tPoQQ8-CROPPED.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    
+    
+    // width: $max-page-width;
+    height: 50vh;
 
 
-// TO DO: bigger screens, grid tab order, aria, move top button to top of viewport
+    //To make the text vertically centered (because we need to make this anything by static positioned for the absolute position below to have a frame of ref) - part 1/2
+    position: relative;
+
+
+    div {
+        //To make the text vertically centered - part 2/2
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        //To vertically center the text
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        overflow: hidden;
+
+        min-height: 60%;
+        width: 90%;
+        background: rgba(0, 0, 0, 0.7);
+        color: $header-font-color;
+        margin: auto;
+        text-align: center;
+        }
+        h2 {
+            margin: 0;
+        }
+}
+
+
+// TO DO: grid tab order, aria, move top button to top of viewport
