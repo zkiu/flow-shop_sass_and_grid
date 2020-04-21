@@ -1,3 +1,7 @@
+body {
+    max-width: $max-page-width;
+}
+
 .header-company-slogan {
     //this is hidden on phone display for conciseness
     display: none;
@@ -42,13 +46,12 @@ nav ul {
     }
 }
 
-@include media('>650px') {
-    //creating 2 columns inside offerings at higher widths
+@include media('>#{$offering-split-point}') {
+    //creating 2 columns inside Offerings at higher widths
     .offering-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
-        background-color: rosybrown;
     }
 }
 
@@ -61,8 +64,19 @@ nav ul {
     }
 }
 
+.thumbnail-section {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    a {
+        margin: 0 auto;
+    }
+    @include media(">550px") {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-
-body {
-    max-width: $max-page-width;
+    @include media('>#{$offering-split-point}') {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+

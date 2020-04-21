@@ -10,15 +10,16 @@ html {
     box-sizing: border-box;
     background-color: $main-background-color;
     
-    @include media('>phone'){
-        background: red;
-    }
-    @include media('>=tablet'){
-        background: green;
-    }
-    @media screen and (prefers-reduced-motion: reduce) {
-        scroll-behavior: auto;
-    }
+    // --- for dubbugging different screne sizes
+    // @include media('>phone'){
+    //     background: red;
+    // }
+    // @include media('>=tablet'){
+    //     background: green;
+    // }
+    // @media screen and (prefers-reduced-motion: reduce) {
+    //     scroll-behavior: auto;
+    // }
 }
 
     
@@ -82,29 +83,24 @@ nav ul {
     }
 }
 
-//  WELCOME SPLASH
+//  WELCOME SPLASH --------------
 
 #welcome {
     //  BACKGROUND image settings
     background:
-      /* top, transparent filter, faked with gradient */
+      // Transparent filter over an image, faked with gradient */
       linear-gradient(rgba(255, 0, 0, 0.1),rgba(0, 0, 0, 0.6)),
-      /* bottom, image */
-      url("images/annie-spratt-01Wa3tPoQQ8-CROPPED.jpg");
+      url("images/annie-spratt-01Wa3tPoQQ8-CROPPED.jpg"); //would use different sizes of the same image depending on screen size if this was an official production, which would increase page loading speed
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
     background-size: cover;
     
-    
-    
     // width: $max-page-width;
     height: 50vh;
 
-
     //To make the text vertically centered (because we need to make this anything by static positioned for the absolute position below to have a frame of ref) - part 1/2
     position: relative;
-
 
     div {
         //To make the text vertically centered - part 2/2
@@ -131,6 +127,48 @@ nav ul {
             margin: 0;
         }
 }
+
+
+//  OFFERINGS PAGE --------------
+
+
+.offering-photo {
+    width: 100%;
+    height: auto;
+
+}
+
+.thumbnail-section{
+    a {
+        width: $thumbnail-size;
+        height: $thumbnail-size;
+        margin-bottom: 10px;
+    }
+    .thumbnail {
+        width: $thumbnail-size;
+        height: $thumbnail-size;
+        
+        border-radius: 10% 30% 40% 40%;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.9);
+            top: -5px;
+            position: relative;
+        }
+
+    }
+}
+
+
+
+//  About --------------
+
+#about {
+    background-color: yellow;
+}
+
+
+
+
 
 
 // TO DO: grid tab order, aria, move top button to top of viewport
