@@ -22,6 +22,12 @@ html {
     // }
 }
 
+// main {
+//     //add more breathing room between the offering section and contact section an the breakpoint below
+//     @include media('>#{$breakpoint-about-section}') {
+//         margin-bottom: 15px;
+//     }
+// }
     
 //  HEADER WITH COMPANY LOGO
 .company-logo {
@@ -176,10 +182,14 @@ nav ul {
 
 .about-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    
+    @include media(">#{$breakpoint-thumbnail-2col}") {
+        flex-direction: row; 
+    }
     @include media('>#{$breakpoint-about-section}'){
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     img {
         width: 200px;
