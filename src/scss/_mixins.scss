@@ -1,5 +1,4 @@
 // PopOut Tab to go back to resume page ---------------------------
-
 // initial tab-pull-out animation sequence, mostly for mobile users
 .return-pop-out {
     animation-name: tabPopOut;
@@ -44,7 +43,7 @@
     }
 }
 
-// BUTTON - Got to Top
+// BUTTON - Got to Top ----------------------------
 // from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 #btnTop {
     display: none;
@@ -76,5 +75,59 @@
     // Increase font size */
     &:hover {
         background-color: darken($btn-top-color, 20%);
+    }
+}
+
+// Kiu's Work Button
+$kiu-button-border-radius: 40px;
+$kiu-button-color: #3e7035;
+$kiu-button-lighter-color: lighten($kiu-button-color,8%);
+$kiu-button-shadow-color: darken($kiu-button-color, 8%);
+$kiu-button-text-color: #e1e9df;
+
+#resume-button {
+    // shadow effect
+    -moz-box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
+    -webkit-box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
+    box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $kiu-button-color), color-stop(1, $kiu-button-lighter-color));
+    background: -moz-linear-gradient(center top, $kiu-button-color 5%, $kiu-button-lighter-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$kiu-button-color', endColorstr='$kiu-button-lighter-color');
+    background-color: $kiu-button-color;
+    // border radius
+    -webkit-border-top-left-radius: $kiu-button-border-radius;
+    -moz-border-radius-topleft: $kiu-button-border-radius;
+    border-top-left-radius: $kiu-button-border-radius;
+    -webkit-border-top-right-radius: $kiu-button-border-radius;
+    -moz-border-radius-topright: $kiu-button-border-radius;
+    border-top-right-radius: $kiu-button-border-radius;
+    -webkit-border-bottom-right-radius: $kiu-button-border-radius;
+    -moz-border-radius-bottomright: $kiu-button-border-radius;
+    border-bottom-right-radius: $kiu-button-border-radius;
+    -webkit-border-bottom-left-radius: $kiu-button-border-radius;
+    -moz-border-radius-bottomleft: $kiu-button-border-radius;
+    border-bottom-left-radius: $kiu-button-border-radius;
+    text-indent: 0;
+    display: inline-block;
+    color: $kiu-button-text-color;
+    //font style
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    // button size
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0px 1px 0px black;
+
+    &:hover {
+        background: $kiu-button-color;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
     }
 }
