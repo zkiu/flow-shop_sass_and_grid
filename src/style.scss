@@ -22,12 +22,6 @@ html {
     // }
 }
 
-// main {
-//     //add more breathing room between the offering section and contact section an the breakpoint below
-//     @include media('>#{$breakpoint-about-section}') {
-//         margin-bottom: 15px;
-//     }
-// }
     
 //  HEADER WITH COMPANY LOGO
 .company-logo {
@@ -138,6 +132,13 @@ nav ul {
 
 //  OFFERINGS PAGE --------------
 
+#offerings {
+
+    //add more breathing room between the offering section and contact section an the breakpoint below
+    @include media('>#{$breakpoint-about-section}') {
+        margin-bottom: 10px;
+    }
+}
 
 .offering-photo {
     width: 100%;
@@ -171,7 +172,7 @@ nav ul {
 #about {
     background-color: $about-bg-color;
     width: 95%;
-    // height: 95%;
+    height: fit-content;
     margin: 5% auto;
     border-radius: $border-radius-typical;
     border: 3px single $color-deep-taupe;
