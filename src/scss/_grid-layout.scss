@@ -18,7 +18,7 @@ nav ul {
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 10px;
+    row-gap: 0;
     &>* {
         // single column by default 
         grid-column: 1 / span 12;
@@ -46,7 +46,7 @@ nav ul {
     }
 }
 
-@include media('>#{$offering-split-point}') {
+@include media('>#{$breakpoint-offering-section-split}') {
     //creating 2 columns inside Offerings at higher widths
     .offering-container{
         display: grid;
@@ -55,7 +55,7 @@ nav ul {
     }
 }
 
-@include media('>1000px') {
+@include media('>#{$breakpoint-about-section}') {
     #offerings{
         grid-column: 1 / 10;
     }
@@ -69,13 +69,13 @@ nav ul {
     justify-content: space-around;
     grid-template-columns: repeat(2, 1fr);
     a {
-        margin: 0 auto;
+        justify-self: center;
     }
     @include media(">550px") {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    @include media('>#{$offering-split-point}') {
+    @include media('>#{$breakpoint-offering-section-split}') {
         grid-template-columns: repeat(2, 1fr);
     }
 }

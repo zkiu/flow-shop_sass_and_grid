@@ -5,6 +5,11 @@ $breakpoints: (
     'desktop': 1024px
 );
 
+$breakpoint-offering-section-split: 650px;
+$breakpoint-about-section: 1000px;
+
+
+
 /* Coolors Exported Palette - coolors.co/f9e0d9-e6dbd0-7d6167-754f5b-5d4954 */
 $color-pale-pink: rgba(249, 224, 217, 1);
 $color-bone: rgba(230, 219, 208, 1);
@@ -15,12 +20,14 @@ $color-eggplant: rgba(93, 73, 84, 1);
 $main-background-color: $color-eggplant;
 $header-font-color: $color-bone;
 
+$border-radius-typical: 10px;
+
+$about-bg-color: $color-deep-taupe-darker;
+$footer-bg-color: $color-deep-taupe;
+
 $btn-top-color: rgba(60, 165, 69, 0.904);
 
 $overall-left-side-gap: 15px;
 $max-page-width: 1500px;
 
 $thumbnail-size: 120px;
-
-
-$offering-split-point: 650px;
