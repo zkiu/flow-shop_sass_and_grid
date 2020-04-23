@@ -3,14 +3,14 @@
 
 var buttonTop = document.getElementById("btnTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 250px from the top of the document, show the button
 
 window.onscroll = function () {
     scrollFunction()
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         buttonTop.style.display = "block";
     } else {
         buttonTop.style.display = "none";

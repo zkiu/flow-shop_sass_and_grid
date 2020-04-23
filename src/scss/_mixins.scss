@@ -1,5 +1,5 @@
-// PopOut Tab to go back to resume page ---------------------------
-// initial tab-pull-out animation sequence, mostly for mobile users
+// ----- PopOut Tab to go back to resume page ---------------------------
+// ON PAGE LOAD - initial tab-pull-out animation sequence, mostly for mobile users
 .return-pop-out {
     animation-name: tabPopOut;
     animation-duration: 4s;
@@ -13,10 +13,11 @@
 }
 //Rest of the styles for the tab-pull-out feature
 .return-pop-out {
-    display: block;
-    position: fixed;
+    //position of tab
     right: -187px;
     bottom: 20%;
+    display: block;
+    position: fixed;
     z-index: 99;
     background-color: rgba(255, 208, 0, 0.9);
     border: 1px solid orange;
@@ -43,14 +44,14 @@
     }
 }
 
-// BUTTON - Got to Top ----------------------------
+// ------ BUTTON - Got to Top ----------------------------
 // from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 #btnTop {
     display: none;
     //Hidden by default
     position: fixed;
     // Fixed/sticky position
-    bottom: 10px;
+    top: 30px;
     // Place the button at the bottom of the page */
     right: 10px;
     // Place the button 30px from the right */
