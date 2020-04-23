@@ -58,6 +58,7 @@ nav ul {
         padding-bottom: 1px;
         border-bottom: 1px dotted #000;
         margin-right: $overall-left-side-gap;
+
         &:last-child {
             border-bottom: none;
         }
@@ -122,7 +123,7 @@ nav ul {
 //  OFFERINGS PAGE --------------
 
 #offerings {
-
+    color: lighten($header-font-color, 0%);
     //add more breathing room between the offering section and contact section an the breakpoint below
     @include media('>#{$breakpoint-about-section}') {
         margin-bottom: 10px;
@@ -160,6 +161,7 @@ nav ul {
 
 #about {
     background-color: $about-bg-color;
+    color: lighten($header-font-color, 10%);
     width: 95%;
     height: fit-content;
     margin: 5% auto;
@@ -213,8 +215,21 @@ p {
 
 #contacts {
     background-color: $footer-bg-color;
+    color: lighten($header-font-color, 10%);
+    div {
+        margin: $overall-left-side-gap;
+        margin-top: 0;
+    }
 }
 
+#contacts-traditional a {
+        text-decoration: none;
+        color: $header-font-color;
+}
 
-
+#contacs-social a{
+    font-size:  2em;
+    color: $header-font-color;
+    
+}
 // TO DO: grid tab order, aria, move top button to top of viewport

@@ -21,13 +21,14 @@ $color-eggplant: rgba(93, 73, 84, 1);
 $main-background-color: $color-eggplant;
 $header-font-color: $color-bone;
 
-$border-radius-typical: 10px;
+$offering-bg-color: $color-deep-taupe-darker;
 
-$about-bg-color: $color-deep-taupe-darker;
-$footer-bg-color: $color-deep-taupe;
-
+$about-bg-color: $color-deep-taupe;
+$footer-bg-color: $color-deep-taupe-darker;
 $btn-top-color: rgba(60, 165, 69, 0.904);
 
+
+$border-radius-typical: 10px;
 $overall-left-side-gap: 15px;
 $max-page-width: 1500px;
 
