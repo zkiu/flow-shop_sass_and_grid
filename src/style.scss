@@ -54,7 +54,6 @@ header {
 .header-contacts p {
     font-size: 1.3em;
     margin: 0;
-    padding: 0;
 }
 
 //  NAVIGATION AREA
@@ -136,7 +135,10 @@ nav ul {
 //  OFFERINGS PAGE --------------
 
 #offerings {
-    margin-left: $overall-left-side-gap;
+    
+    h2, p, h3, h4 {
+        margin-left: $overall-left-side-gap;
+    }
     
     //add more breathing room between the offering section and contact section an the breakpoint below
     @include media('>#{$breakpoint-about-section}') {
@@ -233,6 +235,10 @@ figcaption {
         margin: $overall-left-side-gap;
         margin-top: 0;
     }
+}
+
+#contacts-traditional p {
+    margin: 0;
 }
 
 #contacs-social a{
