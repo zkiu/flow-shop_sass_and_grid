@@ -2,13 +2,13 @@ body {
     max-width: $max-page-width;
 }
 
-.header-company-slogan {
-    //this is hidden on phone display for conciseness
-    display: none;
-    @include media('>=phone') {
-        display: block;
-    }
-}
+// .header-company-slogan {
+//     //this is hidden on phone display for conciseness
+//     display: none;
+//     @include media('>=phone') {
+//         display: block;
+//     }
+// }
 
 nav ul {
     display: flex;

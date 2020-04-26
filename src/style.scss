@@ -5,31 +5,47 @@
 @import "scss/mixins";
 @import "scss/_grid-layout";
 
+
+
+//  OVERALL STYLES
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     background-color: $main-background-color;
+    color: lighten($header-font-color, 5%);
+    font-family: $font-body;
+    a {
+        color: lighten($header-font-color, 5%);
+        text-decoration: none;
+    }
+}
+
+h1, q {
+    font-family: $font-quote;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
 }
 
     
 //  HEADER WITH COMPANY LOGO
 .company-logo {
-    text-decoration: none;
-    color: lighten($header-font-color, 10%);
     display: block;
-    
     h1 {
         font-size: 2.5em;
         margin: auto;
         padding: 10px 0;
         text-align: center;
-        // border-bottom: 1px double $header-font-color;
     } 
+}
+
+.header-company-slogan {
+    font-size: 1.5em;
 }
 
 .header-contacts {
     margin: 0;
-    color: lighten($header-font-color, 10%);
     font-size: 1.3em;
     p:first-child {
         padding-top: 5px;
@@ -38,10 +54,6 @@ html {
         margin: 0;
         padding-bottom: 5px;
         padding-left: $overall-left-side-gap;
-    }
-    a {
-        text-decoration: none;
-        color: $header-font-color;
     }
 }
 
@@ -63,13 +75,16 @@ nav ul {
         &:last-child {
             border-bottom: none;
         }
+
+        @include media('>phone') {
+            border-bottom: none;
+        }
     }
     a {
-        text-decoration: none;
-        color: inherit;
+        color: black;
         
         &:visited {
-            color: inherit;
+            color: black;
         }
     }
 }
@@ -109,8 +124,7 @@ nav ul {
 
         min-height: 60%;
         width: 90%;
-        background: rgba(0, 0, 0, 0.85);
-        color: $header-font-color;
+        background: rgba(0, 0, 0, 0.8);
         margin: auto;
         text-align: center;
         border-radius: $border-radius-typical;
@@ -124,7 +138,6 @@ nav ul {
 //  OFFERINGS PAGE --------------
 
 #offerings {
-    color: lighten($header-font-color, 0%);
     //add more breathing room between the offering section and contact section an the breakpoint below
     @include media('>#{$breakpoint-about-section}') {
         margin-bottom: 10px;
@@ -162,7 +175,6 @@ nav ul {
 
 #about {
     background-color: $about-bg-color;
-    color: lighten($header-font-color, 10%);
     width: 95%;
     height: fit-content;
     margin: 5% auto;
@@ -216,7 +228,6 @@ p {
 
 #contacts {
     background-color: $footer-bg-color;
-    color: lighten($header-font-color, 10%);
     div {
         margin: $overall-left-side-gap;
         margin-top: 0;
@@ -224,13 +235,12 @@ p {
 }
 
 #contacts-traditional a {
-        text-decoration: none;
-        color: $header-font-color;
+    //may not be needed
 }
 
 #contacs-social a{
     font-size:  2em;
-    color: $header-font-color;
+
     
 }
 // TO DO: grid tab order, aria, move top button to top of viewport

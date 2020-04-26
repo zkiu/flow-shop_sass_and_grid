@@ -1,5 +1,9 @@
 // ----- PopOut Tab to go back to resume page ---------------------------
 // ON PAGE LOAD - initial tab-pull-out animation sequence, mostly for mobile users
+
+//adjust length base on the size of the icon and message
+$hidden-tab-length: -192px;
+
 .return-pop-out {
     animation-name: tabPopOut;
     animation-duration: 4s;
@@ -7,19 +11,20 @@
     animation-iteration-count: 1;
 }
 @keyframes tabPopOut {
-    0% {right: -187px;}
+    0% {right: $hidden-tab-length;}
     50% {right: 0;}
-    100% {right: -187px;}
+    100% {right: $hidden-tab-length;}
 }
 //Rest of the styles for the tab-pull-out feature
 .return-pop-out {
     //position of tab
-    right: -187px;
+    right: $hidden-tab-length;
     bottom: 20%;
     display: block;
     position: fixed;
     z-index: 99;
     background-color: rgba(255, 208, 0, 0.9);
+    color: black;
     border: 1px solid orange;
     border-right: none;
     border-radius: 5px 0 0 5px;
@@ -27,7 +32,7 @@
     transition: transform .5s;
     cursor: pointer;
     &:hover {
-        transform: translate(-187px, 0px);
+        transform: translate($hidden-tab-length, 0px);
     }
 
     i {

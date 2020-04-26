@@ -1,3 +1,5 @@
+$max-page-width: 2000px;
+
 // media size setup
 $breakpoints: (
     'phone': 400px,
@@ -28,8 +30,16 @@ $footer-bg-color: $color-deep-taupe-darker;
 $btn-top-color: rgba(60, 165, 69, 0.904);
 
 
+// fonts
+$font-heading: 'EB Garamond',serif;
+$font-quote: 'Courgette',cursive;
+$font-body: 'Mukta',sans-serif;
+
+
+// default sizes
+
 $border-radius-typical: 10px;
 $overall-left-side-gap: 15px;
-$max-page-width: 1500px;
+
 
 $thumbnail-size: 120px;
