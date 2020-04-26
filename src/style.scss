@@ -14,6 +14,7 @@ html {
     background-color: $main-background-color;
     color: lighten($header-font-color, 5%);
     font-family: $font-body;
+    margin: 0;
     a {
         color: lighten($header-font-color, 5%);
         text-decoration: none;
@@ -30,38 +31,38 @@ h2, h3, h4, h5, h6 {
 
     
 //  HEADER WITH COMPANY LOGO
+header {
+    text-align: center;
+}
+
 .company-logo {
     display: block;
     h1 {
         font-size: 2.5em;
         margin: auto;
-        padding: 10px 0;
-        text-align: center;
-    } 
+        padding-top: 10px;
+    }
 }
 
 .header-company-slogan {
     font-size: 1.5em;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    border-bottom: 3px double $header-font-color;
 }
 
-.header-contacts {
-    margin: 0;
+.header-contacts p {
     font-size: 1.3em;
-    p:first-child {
-        padding-top: 5px;
-    } 
-    p {
-        margin: 0;
-        padding-bottom: 5px;
-        padding-left: $overall-left-side-gap;
-    }
+    margin: 0;
+    padding: 0;
 }
 
 //  NAVIGATION AREA
 nav ul {
     list-style-type: none;
     background-color: $color-pale-pink;
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.5em;
@@ -129,15 +130,14 @@ nav ul {
         text-align: center;
         border-radius: $border-radius-typical;
         }
-        h2 {
-            margin: 0;
-        }
 }
 
 
 //  OFFERINGS PAGE --------------
 
 #offerings {
+    margin-left: $overall-left-side-gap;
+    
     //add more breathing room between the offering section and contact section an the breakpoint below
     @include media('>#{$breakpoint-about-section}') {
         margin-bottom: 10px;
@@ -177,11 +177,16 @@ nav ul {
     background-color: $about-bg-color;
     width: 95%;
     height: fit-content;
+    height: -moz-fit-content;
     margin: 5% auto;
     border-radius: $border-radius-typical;
-    border: 3px single $color-deep-taupe;
     h2 {
         margin-left: $overall-left-side-gap;
+    }
+    p {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
     }
 }
 
@@ -220,10 +225,6 @@ figcaption {
     text-align: right;
 }
 
-p {
-    margin: $overall-left-side-gap;
-}
-
 //  CONTACTS SECTION --------------
 
 #contacts {
@@ -234,13 +235,7 @@ p {
     }
 }
 
-#contacts-traditional a {
-    //may not be needed
-}
-
 #contacs-social a{
     font-size:  2em;
-
-    
 }
-// TO DO: grid tab order, aria, move top button to top of viewport
+// TO DO: grid tab order, aria, thumbnail expand view, javascrip naming of thumbnail
