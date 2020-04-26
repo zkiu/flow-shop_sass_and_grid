@@ -3,6 +3,8 @@
     %head
         %meta(charset="UTF-8")/
         %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        //Turning off Number Detection as phone numbers are already links
+        %meta(name="format-detection" content="telephone=no")/
         %title Bill's Flower Shop
         <link href="https://fonts.googleapis.com/css2?family=Courgette&family=EB+Garamond&family=Mukta&display=swap" rel="stylesheet"> 
         %link(rel="stylesheet" href="style.css")/
@@ -18,7 +20,8 @@
             %p.header-company-slogan
                 %em Providing customized flower arrangements for all occasions since 2020!
             %div.header-contacts
-                %p Phone Number: (780)&nbsp;XXX&#8209;XXXX
+                %p Phone Number: &nbsp;
+                    %a(href="tel:+01-780-123-4567") (780)&nbsp;123&#8209;4567
                 %p Email:&nbsp;
                     %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
                 
@@ -103,9 +106,9 @@
         %footer#contacts
             %div#contacts-traditional    
                 %h3 Contact Bill:
-                %p Phone Number: (780)&nbsp;XXX&#8209;XXXX
-                    %br/
-                    Email: 
+                %p Phone&nbsp;Number: &nbsp;
+                    %a(href="tel:+01-780-123-4567") (780)&nbsp;123&#8209;4567
+                %p Email: &nbsp;
                     %a(href="mailto:zquoc@yahoo.ca?subject=Bill%27s%20Flower%20Shop%3A") zquoc@yahoo.ca
             
             %div#credits-kiu
