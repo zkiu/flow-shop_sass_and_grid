@@ -44,7 +44,6 @@ $hidden-tab-length: -192px;
         font-size: 1em;
         display: inline-block;
         margin-right: 5px;
-        -ms-transform: translateY(-40%);
         transform: translateY(-40%)
     }
 }
@@ -93,25 +92,15 @@ $kiu-button-text-color: #e1e9df;
 
 #resume-button {
     // shadow effect
-    -moz-box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
-    -webkit-box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
     box-shadow: inset 5px 5px 15px 3px $kiu-button-shadow-color;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $kiu-button-color), color-stop(1, $kiu-button-lighter-color));
     background: -moz-linear-gradient(center top, $kiu-button-color 5%, $kiu-button-lighter-color 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$kiu-button-color', endColorstr='$kiu-button-lighter-color');
     background-color: $kiu-button-color;
     // border radius
-    -webkit-border-top-left-radius: $kiu-button-border-radius;
-    -moz-border-radius-topleft: $kiu-button-border-radius;
     border-top-left-radius: $kiu-button-border-radius;
-    -webkit-border-top-right-radius: $kiu-button-border-radius;
-    -moz-border-radius-topright: $kiu-button-border-radius;
     border-top-right-radius: $kiu-button-border-radius;
-    -webkit-border-bottom-right-radius: $kiu-button-border-radius;
-    -moz-border-radius-bottomright: $kiu-button-border-radius;
     border-bottom-right-radius: $kiu-button-border-radius;
-    -webkit-border-bottom-left-radius: $kiu-button-border-radius;
-    -moz-border-radius-bottomleft: $kiu-button-border-radius;
     border-bottom-left-radius: $kiu-button-border-radius;
     text-indent: 0;
     display: inline-block;

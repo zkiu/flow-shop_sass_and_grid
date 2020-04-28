@@ -13,7 +13,8 @@ const babel = require('gulp-babel');
 
 const browserSync = require('browser-sync').create();
 
-
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 
 async function clean(cb) {
   await del('build/*.html');
@@ -38,7 +39,8 @@ function css(cb) {
       outputStyle: 'compressed'
       }).on("error", sass.logError)
     )
-
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write('.'))
   .pipe(dest('build/'));
 
   cb();
