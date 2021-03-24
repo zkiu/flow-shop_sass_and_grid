@@ -1,27 +1,39 @@
 {
-  "name": "portfolia-01",
-  "version": "1.0.0",
-  "description": "A webpage created by Kui for his portfolio. This page is created using HAML for HTML and SASS for CSS. This page uses the new grid layout from HTML5",
-  "author": "Kiu",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "autoprefixer": "^9.7.6",
-    "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-haml": "^1.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.1"
-  },
-  "dependencies": {
-    "gulp-sourcemaps": "^2.6.5",
-    "kind-of": "^6.0.3",
-    "lodash": "^4.17.15"
-  }
+	"name": "flower-shop",
+	"version": "0.1.0",
+	"private": false,
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.11.9",
+		"@testing-library/react": "^11.2.5",
+		"@testing-library/user-event": "^12.8.1",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-scripts": "4.0.3",
+		"sass": "^1.32.8",
+		"web-vitals": "^1.1.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
