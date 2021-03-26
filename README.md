@@ -3,5 +3,4 @@ A webpage is coded using HAML (HTML abstraction markup language), and SASS (CSS 
 
 This website is inspired by my friend's wish to have a side business selling flower arrangements. I hope that getting my friend's (Bill's) collaboration on this project will inspire him to finally make his dream into reality.
 
-The code for this is available at https://github.com/zkiu/flower-shop.
-The page can be accessed here https://github.com/zkiu/flower-shop.
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/192606185@N03/51070234897/in/dateposted-public/" title="proj3_Bill_flower_shop"><img src="https://live.staticflickr.com/65535/51070234897_76666fe29e_n.jpg" width="239" height="320" alt="proj3_Bill_flower_shop"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
