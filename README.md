@@ -4,4 +4,4 @@ A webpage is coded using HAML (HTML abstraction markup language), and SASS (CSS 
 This website is inspired by my friend's wish to have a side business selling flower arrangements. I hope that getting my friend's (Bill's) collaboration on this project will inspire him to finally make his dream into reality.
 
 <p align="center">
-<img src="https://live.staticflickr.com/65535/51070234897_76666fe29e_n.jpg" width="80%"></p>
+<img src="https://live.staticflickr.com/65535/51070234897_76666fe29e_n.jpg" width="50%"></p>
